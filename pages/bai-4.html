@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 4 | Hợp tác trực tuyến</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .article-layout > .content-card {
+      min-width: 0;
+    }
+
+    .project-summary {
+      display: grid;
+      gap: 12px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .project-summary li {
+      padding: 14px 16px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .project-summary strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .quote-note {
+      margin: 18px 0 0;
+      padding: 16px 18px;
+      color: var(--muted);
+      background: #f8fafc;
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius);
+    }
+
+    .evidence-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .evidence-wide {
+      margin: 16px 0;
+      overflow: hidden;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .evidence-wide img {
+      width: 100%;
+      height: auto;
+      background: #e2e8f0;
+    }
+
+    .evidence-wide figcaption {
+      padding: 12px 14px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .chat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .mini-card {
+      padding: 16px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .mini-card h4 {
+      margin-top: 0;
+    }
+
+    .tools-table,
+    .project-table,
+    .solution-table,
+    .effect-table,
+    .challenge-table {
+      min-width: 860px;
+    }
+
+    @media (max-width: 680px) {
+      .chat-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Điều hướng chính">
+      <a class="brand" href="../index.html">Digital Portfolio</a>
+      <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="main-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="main-menu">
+        <a href="../index.html">Trang chủ</a>
+        <a href="#muc-tieu">Mục tiêu</a>
+        <a href="#cong-cu">Công cụ</a>
+        <a href="#minh-chung">Minh chứng</a>
+        <a href="#bai-hoc">Bài học</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html">← Quay về trang chủ</a>
+        <p class="eyebrow">Bài học 04</p>
+        <h1>Công cụ hợp tác trực tuyến và năng lực quản lý cá nhân trong dự án nhóm</h1>
+        <p>Báo cáo ghi lại quá trình tham gia dự án nhóm, vai trò cá nhân, cách sử dụng các công cụ cộng tác trực tuyến và bài học rút ra sau khi hoàn thành nhiệm vụ.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container article-layout">
+        <article class="content-card">
+          <section class="content-section" id="muc-tieu">
+            <h2>Mục tiêu &amp; Tóm tắt</h2>
+            <p>Thành thạo các công cụ hợp tác trực tuyến và thể hiện năng lực quản lý, điều phối cá nhân trong dự án nhóm.</p>
+            <p class="quote-note">Qua dự án này, mình nhận thấy việc sử dụng công cụ hợp tác trực tuyến không chỉ giúp nhóm làm việc nhanh hơn mà còn giúp từng thành viên kiểm soát rõ phần việc của mình. Với vai trò phụ trách phần “Giải pháp”, mình phải theo dõi nội dung của các bạn khác, đặc biệt là phần “Thách thức của AI”, để đề xuất giải pháp phù hợp và có tính liên kết.</p>
+
+            <ul class="project-summary">
+              <li>
+                <strong>Tên dự án</strong>
+                AI trong ung thư học - Từ chẩn đoán chính xác đến phẫu thuật thông minh
+              </li>
+              <li>
+                <strong>Vai trò của tôi</strong>
+                Viết phần Giải pháp ứng dụng AI trong ung thư học, gồm PPP, Federated Learning, AI-as-a-Service và xây dựng kho dữ liệu ung thư Việt Nam.
+              </li>
+              <li>
+                <strong>Thời gian thực hiện</strong>
+                Tuần 1, từ 7/4 đến 14/4/2026.
+              </li>
+            </ul>
+          </section>
+
+          <section class="content-section" id="cong-cu">
+            <h2>I. Các công cụ hợp tác trực tuyến đã sử dụng</h2>
+            <p>Nhóm tôi gồm 5 thành viên, thực hiện dự án nghiên cứu và thiết kế slide thuyết trình về ứng dụng của AI trong ung thư học. Trong quá trình làm việc, nhóm sử dụng bộ công cụ đơn giản nhưng đáp ứng đủ nhu cầu soạn thảo, quản lý tiến độ, lưu trữ tài liệu và trao đổi nhóm.</p>
+
+            <div class="table-wrap">
+              <table class="source-table tools-table">
+                <thead>
+                  <tr>
+                    <th>Nhóm chức năng</th>
+                    <th>Tên công cụ</th>
+                    <th>Mục đích sử dụng</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Soạn thảo cộng tác + quản lý nhiệm vụ</td>
+                    <td>Google Docs</td>
+                    <td>Viết nội dung, lập bảng phân công, theo dõi tiến độ từng phần.</td>
+                  </tr>
+                  <tr>
+                    <td>Lưu trữ &amp; chia sẻ file</td>
+                    <td>Google Drive</td>
+                    <td>Lưu slide, tài liệu tham khảo, hình ảnh minh chứng, phân quyền truy cập.</td>
+                  </tr>
+                  <tr>
+                    <td>Giao tiếp nhóm</td>
+                    <td>Zalo + Google Meet</td>
+                    <td>Thảo luận nhanh, họp trực tuyến, nhắc deadline, thống nhất nội dung.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Tôi đã tham gia sử dụng đầy đủ các công cụ trên để hoàn thành phần nội dung được giao, theo dõi tiến độ cá nhân và phối hợp với các thành viên khác.</p>
+            <figure class="evidence-wide">
+              <img src="../assets/bai-4/pic1.png" alt="Minh chứng sử dụng các công cụ hợp tác trực tuyến">
+              <figcaption>Hình 1: Minh chứng quá trình sử dụng công cụ hợp tác trực tuyến trong dự án nhóm.</figcaption>
+            </figure>
+          </section>
+
+          <section class="content-section" id="noi-dung-du-an">
+            <h2>II. Nội dung dự án</h2>
+            <p>Dự án của nhóm được chia thành các phần chính dựa theo cấu trúc slide thuyết trình:</p>
+
+            <div class="table-wrap">
+              <table class="source-table project-table">
+                <thead>
+                  <tr>
+                    <th>Phần</th>
+                    <th>Mô tả nội dung</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Vấn đề ung thư toàn cầu, bao gồm số liệu Việt Nam và thế giới.</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>AI phát hiện khối u trên ảnh, gồm CADe/CADx, CHIEF 94%, PathChat 90%.</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>AI Agent &amp; NLP, gồm phân loại bệnh nhân, tóm tắt bệnh án, chatbot Zalo.</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>AI định vị ranh giới u trong mổ, ví dụ Robot Modus V Synaptive.</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Thách thức của AI, gồm chi phí, dữ liệu training, dương tính giả, trách nhiệm pháp lý.</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Giải pháp, gồm PPP, Federated Learning, AI-as-a-Service, kho dữ liệu ung thư Việt Nam.</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Tương lai &amp; kết luận.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Trong đó, tôi phụ trách chính <strong>phần 6 - Giải pháp</strong>. Phần này có nhiệm vụ trả lời cho các vấn đề đã nêu ở phần thách thức, giúp bài thuyết trình không chỉ dừng ở việc mô tả khó khăn mà còn đề xuất hướng triển khai thực tế.</p>
+          </section>
+
+          <section class="content-section" id="minh-chung">
+            <h2>III. Minh chứng chi tiết theo từng hoạt động</h2>
+
+            <section>
+              <h3>1. Tự quản lý danh sách nhiệm vụ trên Google Docs</h3>
+              <p>Ngay từ đầu dự án, nhóm đã tạo bảng phân công nhiệm vụ trong Google Docs chung. Bảng gồm các cột: STT - Nhiệm vụ - Người phụ trách - Deadline - Trạng thái.</p>
+              <figure class="evidence-wide">
+                <img src="../assets/bai-4/pic2.png" alt="Bảng phân công nhiệm vụ trên Google Docs">
+                <figcaption>Hình 2: Bảng phân công nhiệm vụ và tiến độ làm việc nhóm trên Google Docs.</figcaption>
+              </figure>
+              <p>Trong tuần thực hiện dự án, tôi đã chủ động theo dõi nhiệm vụ của mình và cập nhật trạng thái từ “Chưa bắt đầu” sang “Đang thực hiện”, sau đó chuyển thành “Đã hoàn thành” khi nội dung phần giải pháp đã được viết xong và đưa vào tài liệu chung.</p>
+              <p>Việc sử dụng bảng phân công trong Google Docs giúp tôi biết rõ mình cần hoàn thành nội dung nào, thời hạn ra sao và phần việc của mình liên quan đến các thành viên khác như thế nào. Đặc biệt, vì phần “Giải pháp” cần bám sát phần “Thách thức”, tôi phải theo dõi nội dung do Nguyễn Hoàng Văn viết để đảm bảo các đề xuất không bị lệch trọng tâm.</p>
+            </section>
+
+            <section>
+              <h3>2. Lịch sử chỉnh sửa, đóng góp nội dung trên Google Docs</h3>
+              <p>Tôi đã trực tiếp viết phần <strong>“Giải pháp ứng dụng AI trong ung thư học”</strong> dựa trên nội dung từ slide và các vấn đề đã được nhóm xác định. Nội dung tôi phụ trách gồm các hướng giải pháp chính:</p>
+              <ul>
+                <li><strong>Hợp tác công - tư (PPP):</strong> Đề xuất mô hình phối hợp giữa bệnh viện, nhà nước, doanh nghiệp công nghệ và tổ chức nghiên cứu để giảm chi phí triển khai AI trong y tế.</li>
+                <li><strong>Federated Learning:</strong> Đề xuất hướng huấn luyện mô hình AI trên dữ liệu phân tán, giúp các bệnh viện có thể cùng cải thiện mô hình mà không cần chia sẻ trực tiếp dữ liệu bệnh nhân.</li>
+                <li><strong>AI-as-a-Service:</strong> Đề xuất mô hình sử dụng AI theo dạng dịch vụ để các cơ sở y tế nhỏ có thể tiếp cận công nghệ mà không phải đầu tư toàn bộ hạ tầng ban đầu.</li>
+                <li><strong>Kho dữ liệu ung thư Việt Nam:</strong> Đề xuất xây dựng cơ sở dữ liệu chuẩn hóa, có kiểm soát quyền truy cập, phục vụ nghiên cứu và phát triển AI phù hợp với đặc điểm bệnh nhân Việt Nam.</li>
+              </ul>
+              <p>Ngoài phần nội dung chính, tôi còn chỉnh sửa lại một số câu trong phần “Thách thức” và “Tương lai” để bảo đảm mạch trình bày logic hơn. Cụ thể, sau khi nhóm nêu các khó khăn như chi phí cao, dữ liệu chưa đa dạng, nguy cơ dương tính giả và trách nhiệm pháp lý, phần giải pháp của tôi được viết theo hướng tương ứng với từng vấn đề:</p>
+
+              <div class="table-wrap">
+                <table class="source-table solution-table">
+                  <thead>
+                    <tr>
+                      <th>Thách thức</th>
+                      <th>Giải pháp tôi đề xuất</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chi phí triển khai AI cao</td>
+                      <td>Áp dụng PPP và AI-as-a-Service để chia sẻ chi phí.</td>
+                    </tr>
+                    <tr>
+                      <td>Dữ liệu training thiếu đa dạng</td>
+                      <td>Xây dựng kho dữ liệu ung thư Việt Nam.</td>
+                    </tr>
+                    <tr>
+                      <td>Lo ngại về quyền riêng tư dữ liệu bệnh nhân</td>
+                      <td>Sử dụng Federated Learning.</td>
+                    </tr>
+                    <tr>
+                      <td>Trách nhiệm pháp lý khi AI sai sót</td>
+                      <td>Xây dựng quy trình kiểm định, giám sát và phân quyền trách nhiệm rõ ràng.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>Cách làm này giúp phần của tôi không bị tách rời mà trở thành phần “trả lời” trực tiếp cho các khó khăn mà nhóm đã phân tích trước đó.</p>
+            </section>
+
+            <section>
+              <h3>3. Tương tác, thảo luận chủ động trên Zalo và Google Meet</h3>
+              <p>Trong quá trình làm việc nhóm, tôi sử dụng Zalo để trao đổi nhanh với các thành viên và dùng Google Meet để tham gia họp thống nhất cấu trúc nội dung.</p>
+              <p>Trên Zalo nhóm, tôi đã chủ động gửi tin nhắn hỏi lại phần thách thức để viết giải pháp phù hợp, nhắc các bạn cập nhật tài liệu và đề xuất chỉnh sửa phần slide. Một số ví dụ tin nhắn có thể dùng làm minh chứng:</p>
+
+              <div class="chat-grid">
+                <figure class="evidence">
+                  <img src="../assets/bai-4/pic3.png" alt="Minh chứng thảo luận trên Zalo 1">
+                  <figcaption>Hình 3: Trao đổi nội dung phần thách thức và giải pháp.</figcaption>
+                </figure>
+                <figure class="evidence">
+                  <img src="../assets/bai-4/pic4.png" alt="Minh chứng thảo luận trên Zalo 2">
+                  <figcaption>Hình 4: Nhắc cập nhật tài liệu và tiến độ nhóm.</figcaption>
+                </figure>
+                <figure class="evidence">
+                  <img src="../assets/bai-4/pic5.png" alt="Minh chứng thảo luận trên Zalo 3">
+                  <figcaption>Hình 5: Góp ý chỉnh sửa nội dung slide.</figcaption>
+                </figure>
+                <figure class="evidence">
+                  <img src="../assets/bai-4/pic6.png" alt="Minh chứng thảo luận trên Zalo 4">
+                  <figcaption>Hình 6: Phối hợp hoàn thiện sản phẩm chung.</figcaption>
+                </figure>
+              </div>
+
+              <p>Trên Google Meet, tôi tham gia cuộc họp nhóm để thống nhất cấu trúc slide. Trong buổi họp, tôi trình bày ngắn gọn hướng triển khai phần giải pháp và nhận góp ý từ các thành viên. Sau cuộc họp, tôi chỉnh sửa lại nội dung trong Google Docs để phần giải pháp ngắn gọn hơn, phù hợp với thời lượng thuyết trình.</p>
+            </section>
+
+            <section>
+              <h3>4. Tổ chức và lưu trữ tệp tin khoa học trên Google Drive</h3>
+              <p>Tôi tham gia sử dụng Google Drive chung của nhóm để lưu trữ tài liệu, slide và hình ảnh minh chứng. Các tệp được sắp xếp theo từng nhóm nội dung để dễ tìm kiếm và tránh thất lạc.</p>
+              <figure class="evidence-wide">
+                <img src="../assets/bai-4/pic7.png" alt="Cấu trúc thư mục Google Drive của nhóm">
+                <figcaption>Hình 7: Cấu trúc thư mục lưu trữ tài liệu, slide và hình ảnh minh chứng trên Google Drive.</figcaption>
+              </figure>
+              <p>Với phần cá nhân phụ trách, tôi lưu các tài liệu và ghi chú liên quan đến phần giải pháp vào thư mục riêng, đặt tên theo quy tắc:</p>
+              <p><code>[NoiDung]_[NguoiPhuTrach]_[Ngay]</code></p>
+              <ul>
+                <li><code>GiaiPhapAI_LamTuanDat_0904</code></li>
+                <li><code>FederatedLearning_GhiChu_LamTuanDat</code></li>
+                <li><code>AIaaS_PPP_TomTat_LamTuanDat</code></li>
+              </ul>
+              <p>Việc đặt tên tệp thống nhất giúp tôi và các thành viên khác dễ xác định phiên bản, người phụ trách và nội dung chính của từng tài liệu. Đây là điểm rất cần thiết khi nhóm có nhiều file slide, ảnh minh chứng và tài liệu tham khảo được cập nhật liên tục.</p>
+            </section>
+          </section>
+
+          <section class="content-section" id="danh-gia">
+            <h2>IV. Phân tích hiệu quả của công cụ đối với công việc cá nhân</h2>
+            <div class="table-wrap">
+              <table class="source-table effect-table">
+                <thead>
+                  <tr>
+                    <th>Công cụ</th>
+                    <th>Hiệu quả với cá nhân tôi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Google Docs</td>
+                    <td>Giúp tôi viết phần giải pháp trực tiếp trên tài liệu chung, theo dõi phần thách thức của bạn khác và chỉnh sửa nội dung theo góp ý của nhóm. Lịch sử chỉnh sửa giúp dễ chứng minh phần đóng góp cá nhân.</td>
+                  </tr>
+                  <tr>
+                    <td>Google Drive</td>
+                    <td>Giúp lưu trữ tài liệu tham khảo, slide và ảnh minh chứng tập trung. Nhờ Drive, tôi không phải gửi nhiều phiên bản file rời rạc qua tin nhắn.</td>
+                  </tr>
+                  <tr>
+                    <td>Zalo</td>
+                    <td>Phù hợp để trao đổi nhanh, hỏi lại nội dung, nhắc deadline và phản hồi các chỉnh sửa nhỏ.</td>
+                  </tr>
+                  <tr>
+                    <td>Google Meet</td>
+                    <td>Phù hợp với các buổi họp cần thống nhất cấu trúc lớn, chia sẻ màn hình và chốt nội dung cuối cùng.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="mini-card">
+              <h4>Ưu điểm lớn nhất</h4>
+              <p>Các công cụ giúp nhóm làm việc có trật tự hơn. Thay vì mỗi người tự làm riêng rồi ghép lại vào phút cuối, nhóm có thể theo dõi tiến độ, sửa chéo và phát hiện nội dung bị trùng hoặc thiếu.</p>
+            </div>
+            <div class="mini-card">
+              <h4>Nhược điểm</h4>
+              <p>Google Docs và Zalo chưa thật sự mạnh về quản lý nhiệm vụ như Trello hoặc Asana. Vì vậy, nhóm vẫn phải cập nhật deadline thủ công và nhắc nhau qua tin nhắn. Nếu dự án dài hơn, việc thiếu công cụ quản lý nhiệm vụ chuyên dụng có thể gây khó theo dõi.</p>
+            </div>
+          </section>
+
+          <section class="content-section" id="thach-thuc">
+            <h2>V. Ba thách thức khi tương tác nhóm và cách giải quyết</h2>
+            <div class="table-wrap">
+              <table class="source-table challenge-table">
+                <thead>
+                  <tr>
+                    <th>Thách thức</th>
+                    <th>Cách tôi giải quyết</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Phần giải pháp dễ bị chung chung, không bám sát phần thách thức.</td>
+                    <td>Tôi đọc lại phần “Thách thức của AI” do thành viên khác phụ trách, sau đó viết giải pháp tương ứng với từng vấn đề: chi phí, dữ liệu, quyền riêng tư và pháp lý.</td>
+                  </tr>
+                  <tr>
+                    <td>Một số thuật ngữ kỹ thuật khó hiểu như Federated Learning, AI-as-a-Service.</td>
+                    <td>Tôi giải thích ngắn gọn thuật ngữ trong Google Docs theo hướng dễ hiểu, tránh viết quá học thuật để nội dung phù hợp với slide thuyết trình của sinh viên năm nhất.</td>
+                  </tr>
+                  <tr>
+                    <td>Nội dung các phần có nguy cơ bị rời rạc vì mỗi người phụ trách một đoạn.</td>
+                    <td>Tôi đề xuất nhóm dùng cấu trúc “Vấn đề → Ứng dụng → Thách thức → Giải pháp → Tương lai” để bài thuyết trình có mạch logic. Sau đó, tôi chỉnh lại phần giải pháp để nối trực tiếp với phần thách thức.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Nhờ cách xử lý này, phần việc của tôi không chỉ là viết riêng một đoạn nội dung, mà còn góp phần kết nối các phần của bài thuyết trình thành một tổng thể mạch lạc hơn.</p>
+          </section>
+
+          <section class="content-section" id="bai-hoc">
+            <h2>VI. Đánh giá tổng thể &amp; Bài học rút ra</h2>
+
+            <h3>Điểm mạnh</h3>
+            <p>Tôi đã hoàn thành đúng hạn phần nội dung được giao, biết sử dụng Google Docs, Google Drive, Zalo và Google Meet để phối hợp với nhóm. Phần “Giải pháp” do tôi phụ trách có sự liên kết trực tiếp với phần “Thách thức”, giúp bài thuyết trình có tính thực tiễn và không chỉ dừng ở việc nêu vấn đề.</p>
+
+            <h3>Điểm yếu</h3>
+            <p>Tôi vẫn còn phụ thuộc khá nhiều vào việc nhắc deadline thủ công qua Zalo. Nếu nhóm sử dụng thêm một công cụ quản lý nhiệm vụ chuyên dụng như Trello hoặc Notion, việc theo dõi tiến độ có thể trực quan và chuyên nghiệp hơn.</p>
+
+            <h3>Bài học kinh nghiệm</h3>
+            <p>Qua bài tập này, tôi rút ra rằng làm việc nhóm trực tuyến hiệu quả không chỉ nằm ở việc dùng nhiều công cụ, mà quan trọng hơn là biết chọn đúng công cụ cho đúng mục đích. Với dự án ngắn hạn của nhóm 5 người, Google Docs + Google Drive + Zalo + Google Meet là đủ để hoàn thành nhiệm vụ. Tuy nhiên, đối với dự án dài hơn, nhóm nên bổ sung công cụ quản lý tiến độ chuyên dụng để giảm rủi ro trễ deadline và thiếu minh chứng.</p>
+            <p>Bài học quan trọng nhất của tôi là: mỗi cá nhân cần hiểu rõ vai trò của mình trong tổng thể dự án. Khi phụ trách phần “Giải pháp”, tôi không thể chỉ viết độc lập, mà phải đọc phần “Thách thức”, trao đổi với các bạn khác và chỉnh sửa nội dung sao cho phần việc của mình hỗ trợ toàn bộ bài thuyết trình. Đây cũng chính là kỹ năng hợp tác trực tuyến quan trọng mà bài học hướng tới.</p>
+          </section>
+
+          <nav class="pager" aria-label="Điều hướng bài học">
+            <a href="bai-3.html">← Bài 3</a>
+            <a href="bai-5.html">Bài 5 →</a>
+          </nav>
+        </article>
+
+        <aside class="side-nav">
+          <h2>Trong trang này</h2>
+          <a href="#muc-tieu">Mục tiêu</a>
+          <a href="#cong-cu">Công cụ</a>
+          <a href="#noi-dung-du-an">Nội dung dự án</a>
+          <a href="#minh-chung">Minh chứng</a>
+          <a href="#danh-gia">Đánh giá</a>
+          <a href="#thach-thuc">Thách thức</a>
+          <a href="#bai-hoc">Bài học</a>
+          <a href="../index.html">Trang chủ</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>Bài 4 - Digital Portfolio</p></div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 3 | Viết prompt hiệu quả</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .article-layout > .content-card {
+      min-width: 0;
+    }
+
+    .prompt-task {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .prompt-card {
+      min-width: 0;
+      padding: 18px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .prompt-card h4 {
+      margin-top: 0;
+    }
+
+    .prompt-card figure {
+      margin: 0;
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .prompt-card img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      background: #e2e8f0;
+    }
+
+    .prompt-card figcaption {
+      padding: 12px 14px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .comparison-table {
+      min-width: 980px;
+    }
+
+    .principle-table {
+      min-width: 760px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Điều hướng chính">
+      <a class="brand" href="../index.html">Digital Portfolio</a>
+      <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="main-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="main-menu">
+        <a href="../index.html">Trang chủ</a>
+        <a href="#muc-tieu">Mục tiêu</a>
+        <a href="#prompts">Prompt</a>
+        <a href="#so-sanh">So sánh</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html">← Quay về trang chủ</a>
+        <p class="eyebrow">Bài học 03</p>
+        <h1>Bài tập 3: Viết Prompt hiệu quả cho các tác vụ học tập</h1>
+        <p>Trang báo cáo trình bày quá trình lựa chọn tác vụ học tập, thiết kế nhiều cấp độ prompt, thử nghiệm với AI và rút ra nguyên tắc viết prompt hiệu quả.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container article-layout">
+        <article class="content-card">
+          <section class="content-section" id="muc-tieu">
+            <h2>Mục tiêu &amp; Tóm tắt</h2>
+            <p>Phát triển kỹ năng viết prompt hiệu quả để tận dụng tối đa khả năng của các mô hình ngôn ngữ lớn trong học tập. Bài thực hành lựa chọn 3 tác vụ học tập phổ biến, xây dựng 3 phiên bản prompt cho mỗi tác vụ, thử nghiệm với công cụ AI, so sánh kết quả và rút ra các nguyên tắc viết prompt hiệu quả.</p>
+          </section>
+
+          <section class="content-section" id="phan-tich-tac-vu">
+            <h2>1. Lựa chọn và phân tích 3 tác vụ học tập phổ biến</h2>
+
+            <h3>Tác vụ 1: Tóm tắt một bài đọc/tài liệu học thuật</h3>
+            <p>Mục tiêu của tác vụ này là rút gọn nội dung dài thành bản tóm tắt ngắn gọn nhưng vẫn giữ được ý chính, luận điểm quan trọng và thuật ngữ cốt lõi. Thách thức lớn nhất là AI có thể tóm tắt quá chung chung, bỏ sót luận điểm quan trọng hoặc không phân biệt được đâu là thông tin chính, đâu là ví dụ minh họa. Một prompt hiệu quả cần nêu rõ độ dài, đối tượng đọc, cấu trúc đầu ra và yêu cầu giữ lại các ý học thuật quan trọng.</p>
+
+            <h3>Tác vụ 2: Giải thích một khái niệm phức tạp</h3>
+            <p>Mục tiêu của tác vụ này là giúp người học hiểu một khái niệm khó theo cách dễ tiếp cận hơn. Ví dụ, trong lĩnh vực trí tuệ nhân tạo, các khái niệm như Machine Learning, Neural Network hay Overfitting thường khá trừu tượng. Thách thức là AI có thể giải thích quá hàn lâm hoặc dùng nhiều thuật ngữ khó hiểu. Prompt tốt cần yêu cầu AI giải thích theo nhiều tầng: định nghĩa ngắn, ví dụ đời thường, ví dụ trong ngành học và lỗi hiểu nhầm thường gặp.</p>
+
+            <h3>Tác vụ 3: Tạo bộ câu hỏi ôn tập cho một chủ đề</h3>
+            <p>Mục tiêu của tác vụ này là tạo câu hỏi giúp người học tự kiểm tra mức độ hiểu bài. Thách thức là nếu prompt quá chung, AI thường tạo câu hỏi dễ, lặp lại hoặc chỉ kiểm tra ghi nhớ. Một prompt hiệu quả cần nêu rõ số lượng câu hỏi, mức độ khó, loại câu hỏi, đáp án, giải thích và phân bố theo các mức tư duy như nhớ, hiểu, vận dụng, phân tích.</p>
+          </section>
+
+          <section class="content-section" id="prompts">
+            <h2>2. Xây dựng 3 phiên bản prompt cho mỗi tác vụ</h2>
+            <p>Phần này hiển thị các ảnh ghi lại prompt và kết quả trả lời tương ứng. Mỗi tác vụ gồm ba mức: cơ bản, cải tiến và nâng cao.</p>
+
+            <h3>Tác vụ 1: Tóm tắt một bài đọc/tài liệu học thuật</h3>
+            <div class="prompt-task">
+              <div class="prompt-card">
+                <h4>Prompt cơ bản</h4>
+                <figure>
+                  <img src="../assets/bai-3/1.Prompt cơ bản.png" alt="Tác vụ 1 - Prompt cơ bản">
+                  <figcaption>Tác vụ 1 - Prompt cơ bản.</figcaption>
+                </figure>
+              </div>
+              <div class="prompt-card">
+                <h4>Prompt cải tiến</h4>
+                <figure>
+                  <img src="../assets/bai-3/1.Prompt cải tiến.png" alt="Tác vụ 1 - Prompt cải tiến">
+                  <figcaption>Tác vụ 1 - Prompt cải tiến.</figcaption>
+                </figure>
+              </div>
+              <div class="prompt-card">
+                <h4>Prompt nâng cao</h4>
+                <figure>
+                  <img src="../assets/bai-3/1. Prompt nâng cao.png" alt="Tác vụ 1 - Prompt nâng cao">
+                  <figcaption>Tác vụ 1 - Prompt nâng cao.</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <h3>Tác vụ 2: Giải thích một khái niệm phức tạp</h3>
+            <div class="prompt-task">
+              <div class="prompt-card">
+                <h4>Prompt cơ bản</h4>
+                <figure>
+                  <img src="../assets/bai-3/2.Prompt cơ bản.png" alt="Tác vụ 2 - Prompt cơ bản">
+                  <figcaption>Tác vụ 2 - Prompt cơ bản.</figcaption>
+                </figure>
+              </div>
+              <div class="prompt-card">
+                <h4>Prompt cải tiến</h4>
+                <figure>
+                  <img src="../assets/bai-3/2.Prompt cải tiến.png" alt="Tác vụ 2 - Prompt cải tiến">
+                  <figcaption>Tác vụ 2 - Prompt cải tiến.</figcaption>
+                </figure>
+              </div>
+              <div class="prompt-card">
+                <h4>Prompt nâng cao</h4>
+                <figure>
+                  <img src="../assets/bai-3/2.Prompt nâng cao.png" alt="Tác vụ 2 - Prompt nâng cao">
+                  <figcaption>Tác vụ 2 - Prompt nâng cao.</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <h3>Tác vụ 3: Tạo bộ câu hỏi ôn tập cho một chủ đề</h3>
+            <div class="prompt-task">
+              <div class="prompt-card">
+                <h4>Prompt cơ bản</h4>
+                <figure>
+                  <img src="../assets/bai-3/3.Prompt cơ bản.png" alt="Tác vụ 3 - Prompt cơ bản">
+                  <figcaption>Tác vụ 3 - Prompt cơ bản.</figcaption>
+                </figure>
+              </div>
+              <div class="prompt-card">
+                <h4>Prompt cải tiến</h4>
+                <figure>
+                  <img src="../assets/bai-3/3.Prompt cải tiến.png" alt="Tác vụ 3 - Prompt cải tiến">
+                  <figcaption>Tác vụ 3 - Prompt cải tiến.</figcaption>
+                </figure>
+              </div>
+              <div class="prompt-card">
+                <h4>Prompt nâng cao</h4>
+                <figure>
+                  <img src="../assets/bai-3/3. Prompt nâng cao.png" alt="Tác vụ 3 - Prompt nâng cao">
+                  <figcaption>Tác vụ 3 - Prompt nâng cao.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section" id="so-sanh">
+            <h2>3. Thử nghiệm và so sánh kết quả</h2>
+            <p>Em đã thử nghiệm 9 prompt trên ChatGPT với cùng một nhóm chủ đề học tập. Kết quả cho thấy chất lượng đầu ra thay đổi rõ rệt theo mức độ cụ thể của prompt.</p>
+
+            <div class="table-wrap">
+              <table class="source-table comparison-table">
+                <thead>
+                  <tr>
+                    <th>Tác vụ</th>
+                    <th>Prompt cơ bản</th>
+                    <th>Prompt cải tiến</th>
+                    <th>Prompt nâng cao</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tóm tắt tài liệu học thuật</td>
+                    <td>Kết quả ngắn, có ý chính nhưng khá chung chung. Một số luận điểm quan trọng chưa được tách rõ.</td>
+                    <td>Kết quả rõ hơn, có giới hạn độ dài, có luận điểm chính và thuật ngữ quan trọng.</td>
+                    <td>Kết quả đầy đủ nhất, có tóm tắt, luận điểm, thuật ngữ, ý nghĩa học tập và câu hỏi tự kiểm tra. Phù hợp để đưa vào vở ôn tập.</td>
+                  </tr>
+                  <tr>
+                    <td>Giải thích khái niệm phức tạp</td>
+                    <td>Câu trả lời đúng nhưng còn khô, thiếu ví dụ và khó nhớ.</td>
+                    <td>Câu trả lời dễ hiểu hơn, có ví dụ và phần so sánh.</td>
+                    <td>Câu trả lời có vai trò giảng viên, có ví dụ đời thường, bảng so sánh, hiểu nhầm phổ biến và tóm tắt cuối. Dễ học hơn rõ rệt.</td>
+                  </tr>
+                  <tr>
+                    <td>Tạo câu hỏi ôn tập</td>
+                    <td>Câu hỏi được tạo ra nhưng mức độ chưa đều, một số câu hỏi hơi đơn giản.</td>
+                    <td>Bộ câu hỏi có số lượng, dạng câu hỏi và đáp án rõ hơn.</td>
+                    <td>Bộ câu hỏi có phân tầng mức độ, có đáp án, giải thích, lỗi sai thường gặp và bảng phân loại tư duy. Có thể dùng trực tiếp để ôn thi.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Qua so sánh, prompt cơ bản thường cho kết quả nhanh nhưng thiếu chiều sâu. Prompt cải tiến giúp AI hiểu rõ yêu cầu hơn. Prompt nâng cao tạo ra đầu ra có cấu trúc, có mục tiêu rõ, phù hợp với ngữ cảnh học tập và dễ sử dụng lại.</p>
+          </section>
+
+          <section class="content-section" id="hieu-qua">
+            <h2>4. Phân tích hiệu quả prompt</h2>
+            <p>Các prompt nâng cao hiệu quả hơn không chỉ vì dài hơn, mà vì chúng cung cấp đầy đủ vai trò, bối cảnh, mục tiêu, cấu trúc đầu ra và tiêu chí đánh giá.</p>
+            <p>Đối với tác vụ tóm tắt tài liệu, prompt cơ bản chỉ yêu cầu “tóm tắt”, nên AI không biết cần tóm tắt theo hướng học thuật, ôn tập hay trình bày báo cáo. Khi prompt nâng cao yêu cầu chia thành tóm tắt nhanh, luận điểm trọng tâm, thuật ngữ và câu hỏi tự kiểm tra, kết quả trở nên có tính học tập cao hơn. Người đọc không chỉ biết tài liệu nói gì mà còn biết nên ghi nhớ phần nào.</p>
+            <p>Đối với tác vụ giải thích khái niệm phức tạp, prompt nâng cao sử dụng kỹ thuật role prompting bằng cách yêu cầu AI đóng vai giảng viên. Điều này làm câu trả lời có phong cách sư phạm hơn, biết giải thích từ dễ đến khó. Ngoài ra, yêu cầu dùng ví dụ đời thường và bảng so sánh giúp biến khái niệm trừu tượng thành nội dung dễ hiểu.</p>
+            <p>Đối với tác vụ tạo câu hỏi ôn tập, prompt nâng cao hiệu quả vì có tiêu chí phân tầng rõ ràng. Thay vì chỉ tạo câu hỏi bất kỳ, AI phải tạo câu hỏi theo mức độ nhận biết, thông hiểu, vận dụng và phân tích. Việc yêu cầu thêm đáp án, giải thích và lỗi sai thường gặp cũng giúp bộ câu hỏi có giá trị ôn tập cao hơn.</p>
+            <p>Từ kết quả thử nghiệm, có thể thấy cấu trúc prompt ảnh hưởng trực tiếp đến chất lượng đầu ra. Prompt càng nêu rõ mục tiêu, người học, định dạng và tiêu chí, AI càng tạo ra câu trả lời đúng nhu cầu hơn. Nói cách khác, AI hoạt động hiệu quả hơn khi người dùng biết mô tả nhiệm vụ một cách rõ ràng và có định hướng.</p>
+          </section>
+
+          <section class="content-section" id="nguyen-tac">
+            <h2>5. Tổng hợp nguyên tắc và mẹo viết prompt hiệu quả</h2>
+            <div class="table-wrap">
+              <table class="source-table principle-table">
+                <thead>
+                  <tr>
+                    <th>Nguyên tắc</th>
+                    <th>Ý nghĩa</th>
+                    <th>Ví dụ áp dụng</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Xác định rõ vai trò của AI</td>
+                    <td>Giúp AI chọn phong cách trả lời phù hợp</td>
+                    <td>“Bạn là giảng viên nhập môn AI...”</td>
+                  </tr>
+                  <tr>
+                    <td>Nêu rõ đối tượng người học</td>
+                    <td>Giúp điều chỉnh độ khó và cách diễn đạt</td>
+                    <td>“Giải thích cho sinh viên năm nhất...”</td>
+                  </tr>
+                  <tr>
+                    <td>Cung cấp bối cảnh</td>
+                    <td>Giúp AI hiểu mục đích sử dụng kết quả</td>
+                    <td>“Dùng để ôn tập cuối kỳ...”</td>
+                  </tr>
+                  <tr>
+                    <td>Quy định cấu trúc đầu ra</td>
+                    <td>Làm câu trả lời rõ ràng, dễ dùng</td>
+                    <td>“Chia thành: định nghĩa, ví dụ, bảng so sánh...”</td>
+                  </tr>
+                  <tr>
+                    <td>Đặt tiêu chí chất lượng</td>
+                    <td>Giúp hạn chế câu trả lời chung chung</td>
+                    <td>“Không lặp ý, có đáp án và giải thích...”</td>
+                  </tr>
+                  <tr>
+                    <td>Yêu cầu ví dụ minh họa</td>
+                    <td>Giúp nội dung dễ hiểu và dễ nhớ hơn</td>
+                    <td>“Đưa ví dụ đời thường...”</td>
+                  </tr>
+                  <tr>
+                    <td>Yêu cầu kiểm tra hoặc cảnh báo lỗi</td>
+                    <td>Giúp tăng độ tin cậy của câu trả lời</td>
+                    <td>“Nếu thông tin chưa chắc chắn, hãy ghi cần kiểm tra thêm.”</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="content-section" id="ket-luan">
+            <h2>Kết luận chung</h2>
+            <p>Qua bài thực hành này, em nhận thấy prompt không chỉ là một câu lệnh đơn giản mà là cách người học thiết kế nhiệm vụ cho AI. Prompt cơ bản phù hợp khi cần câu trả lời nhanh, nhưng prompt cải tiến và prompt nâng cao phù hợp hơn cho học tập nghiêm túc vì tạo ra kết quả có cấu trúc, có chiều sâu và dễ kiểm tra. Một prompt hiệu quả cần có đủ 5 yếu tố chính: vai trò, bối cảnh, nhiệm vụ, định dạng đầu ra và tiêu chí đánh giá. Khi biết viết prompt tốt, người học không phụ thuộc hoàn toàn vào AI mà có thể sử dụng AI như một công cụ hỗ trợ tư duy, ôn tập và tự học hiệu quả hơn.</p>
+          </section>
+
+          <nav class="pager" aria-label="Điều hướng bài học">
+            <a href="bai-2.html">← Bài 2</a>
+            <a href="bai-4.html">Bài 4 →</a>
+          </nav>
+        </article>
+
+        <aside class="side-nav">
+          <h2>Trong trang này</h2>
+          <a href="#muc-tieu">Mục tiêu</a>
+          <a href="#phan-tich-tac-vu">Tác vụ</a>
+          <a href="#prompts">Prompt</a>
+          <a href="#so-sanh">So sánh</a>
+          <a href="#hieu-qua">Hiệu quả</a>
+          <a href="#nguyen-tac">Nguyên tắc</a>
+          <a href="#ket-luan">Kết luận</a>
+          <a href="../index.html">Trang chủ</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>Bài 3 - Digital Portfolio</p></div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

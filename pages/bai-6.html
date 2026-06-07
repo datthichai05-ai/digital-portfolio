@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 6 | Sử dụng AI có trách nhiệm</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .article-layout > .content-card {
+      min-width: 0;
+    }
+
+    .project-summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .project-summary li,
+    .note-box,
+    .prompt-box,
+    .mini-card {
+      padding: 16px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .project-summary strong,
+    .mini-card strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .note-box {
+      border-left: 4px solid var(--primary);
+    }
+
+    .prompt-box {
+      margin: 14px 0;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .evidence-wide {
+      margin: 16px 0;
+      overflow: hidden;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .evidence-wide img {
+      width: 100%;
+      height: auto;
+      background: #e2e8f0;
+    }
+
+    .evidence-wide figcaption {
+      padding: 12px 14px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .policy-table {
+      min-width: 760px;
+    }
+
+    @media (max-width: 760px) {
+      .project-summary,
+      .mini-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Điều hướng chính">
+      <a class="brand" href="../index.html">Digital Portfolio</a>
+      <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="main-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="main-menu">
+        <a href="../index.html">Trang chủ</a>
+        <a href="#muc-tieu">Mục tiêu</a>
+        <a href="#nhiem-vu">Nhiệm vụ</a>
+        <a href="#dao-duc">Đạo đức</a>
+        <a href="#nguyen-tac">Nguyên tắc</a>
+        <a href="#ket-luan">Kết luận</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html">← Quay về trang chủ</a>
+        <p class="eyebrow">Bài học 06</p>
+        <h1>Sử dụng AI có trách nhiệm trong học thuật</h1>
+        <p>Báo cáo tìm hiểu cách dùng AI minh bạch, có kiểm chứng và không thay thế tư duy cá nhân trong môi trường đại học.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container article-layout">
+        <article class="content-card">
+          <section class="content-section" id="muc-tieu">
+            <h2>1. Mục tiêu &amp; tóm tắt</h2>
+            <p>Bài thực hành này tìm hiểu cách sử dụng AI một cách có trách nhiệm trong môi trường đại học. Nội dung gồm: nghiên cứu định hướng của trường về liêm chính học thuật, thực hiện một nhiệm vụ học tập có AI hỗ trợ, phân tích các vấn đề đạo đức khi dùng AI, xây dựng nguyên tắc cá nhân và thiết kế infographic minh họa.</p>
+            <p>Qua bài này, em nhận thấy AI là công cụ học tập hữu ích, nhưng cần dùng minh bạch, có kiểm chứng và không thay thế tư duy cá nhân.</p>
+
+            <ul class="project-summary">
+              <li>
+                <strong>Chủ đề</strong>
+                Sử dụng AI có trách nhiệm trong học thuật.
+              </li>
+              <li>
+                <strong>Trọng tâm</strong>
+                Minh bạch, kiểm chứng và trung thực học thuật.
+              </li>
+              <li>
+                <strong>Sản phẩm</strong>
+                Báo cáo kèm infographic về nguyên tắc sử dụng AI.
+              </li>
+            </ul>
+          </section>
+
+          <section class="content-section" id="chinh-sach">
+            <h2>2. Nghiên cứu chính sách của trường về sử dụng AI</h2>
+            <p>Em lựa chọn Trường Đại học Công nghệ - ĐHQGHN làm đối tượng tham khảo. Hiện nay, trường chưa phổ biến rộng rãi một chính sách riêng chỉ dành cho AI tạo sinh trong học tập. Tuy nhiên, có thể liên hệ việc sử dụng AI với các nguyên tắc chung về liêm chính học thuật, như trung thực trong học tập, không đạo văn, không sao chép sản phẩm của người khác và phải chịu trách nhiệm với bài làm của mình.</p>
+            <p>Từ đó, em rút ra một số điểm chính:</p>
+
+            <div class="table-wrap">
+              <table class="source-table policy-table">
+                <thead>
+                  <tr>
+                    <th>Nội dung</th>
+                    <th>Cách hiểu khi dùng AI</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Trung thực học thuật</td>
+                    <td>Không nộp nguyên văn bài do AI tạo ra như sản phẩm cá nhân.</td>
+                  </tr>
+                  <tr>
+                    <td>Trách nhiệm cá nhân</td>
+                    <td>Sinh viên phải hiểu và chịu trách nhiệm với nội dung đã nộp.</td>
+                  </tr>
+                  <tr>
+                    <td>Trích dẫn minh bạch</td>
+                    <td>Cần ghi chú nếu AI hỗ trợ tạo dàn ý, nội dung, hình ảnh.</td>
+                  </tr>
+                  <tr>
+                    <td>Kiểm chứng thông tin</td>
+                    <td>Không dùng thông tin AI đưa ra nếu chưa kiểm tra lại.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="note-box">Nhận định cá nhân: AI không nên bị cấm hoàn toàn, vì đây là công cụ hỗ trợ học tập hiện đại. Tuy nhiên, sinh viên cần dùng AI như một trợ lý học tập, không phải “người làm bài hộ”. Điều quan trọng là phải minh bạch, biết kiểm tra lại thông tin và vẫn giữ vai trò chủ động của người học.</p>
+          </section>
+
+          <section class="content-section" id="nhiem-vu">
+            <h2>3. Thực hiện nhiệm vụ học tập với AI</h2>
+
+            <section>
+              <h3>3.1. Nhiệm vụ được chọn</h3>
+              <p>Em chọn nhiệm vụ: Chuẩn bị dàn ý cho bài thuyết trình ngắn về chủ đề “Lợi ích và rủi ro của AI trong học tập đại học”.</p>
+              <p>Lý do chọn nhiệm vụ này là vì chủ đề gần gũi, dễ áp dụng và thể hiện rõ vai trò hỗ trợ của AI trong quá trình học tập.</p>
+            </section>
+
+            <section>
+              <h3>3.2. Prompt đã sử dụng và kết quả</h3>
+              <h4>Prompt 1</h4>
+              <p class="prompt-box">Bạn là trợ lý học tập cho sinh viên năm nhất. Hãy tạo dàn ý cho bài thuyết trình 5 phút về chủ đề “Lợi ích và rủi ro của AI trong học tập đại học”. Yêu cầu có mở đầu, 3 ý chính, ví dụ thực tế và kết luận ngắn.</p>
+              <p>AI gợi ý dàn ý gồm:</p>
+              <ul>
+                <li><strong>Mở đầu:</strong> AI ngày càng phổ biến trong học tập.</li>
+                <li><strong>Lợi ích:</strong> hỗ trợ tìm ý tưởng, giải thích khái niệm, tiết kiệm thời gian.</li>
+                <li><strong>Rủi ro:</strong> phụ thuộc AI, thông tin sai, gian lận học thuật.</li>
+                <li><strong>Kết luận:</strong> cần dùng AI có trách nhiệm.</li>
+              </ul>
+              <p><strong>Đánh giá và chỉnh sửa:</strong> Kết quả khá rõ ràng nhưng còn chung. Em giữ lại bố cục chính, sau đó thêm ví dụ cụ thể như: dùng AI để tạo câu hỏi ôn tập, tóm tắt tài liệu và kiểm tra lỗi diễn đạt.</p>
+
+              <figure class="evidence-wide">
+                <img src="../assets/bai-6/Ảnh 3 Prompt 1 và kết quả AI.png" alt="Prompt 1 và kết quả AI trả về">
+                <figcaption>Hình 3: Ảnh chụp Prompt 1 và kết quả AI trả về.</figcaption>
+              </figure>
+
+              <h4>Prompt 2</h4>
+              <p class="prompt-box">Hãy cho 5 ví dụ về việc sử dụng AI hợp lý và không hợp lý trong học tập đại học.</p>
+              <p>AI phân biệt:</p>
+              <ul>
+                <li><strong>Sử dụng hợp lý:</strong> nhờ AI gợi ý dàn ý, giải thích khái niệm khó, kiểm tra lỗi chính tả, tạo câu hỏi ôn tập.</li>
+                <li><strong>Sử dụng không hợp lý:</strong> nhờ AI viết toàn bộ bài luận, làm hộ bài tập, tạo nguồn giả, nộp nguyên văn nội dung do AI tạo.</li>
+              </ul>
+              <p><strong>Đánh giá và chỉnh sửa:</strong> Phần này hữu ích vì giúp em thấy rõ ranh giới giữa hỗ trợ và gian lận. Em dùng ý chính nhưng viết lại theo cách hiểu của mình, không sao chép nguyên văn.</p>
+
+              <figure class="evidence-wide">
+                <img src="../assets/bai-6/Ảnh 4 Prompt 2 và kết quả AI.png" alt="Prompt 2 và kết quả AI trả về">
+                <figcaption>Hình 4: Ảnh chụp Prompt 2 và kết quả AI trả về.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h3>3.3. Cách tích hợp đầu ra của AI</h3>
+              <p>Sau khi nhận kết quả, em thực hiện 3 bước:</p>
+              <ol>
+                <li><strong>Lọc ý:</strong> giữ lại các ý phù hợp với chủ đề.</li>
+                <li><strong>Kiểm tra:</strong> đối chiếu với tài liệu môn học và hiểu biết cá nhân.</li>
+                <li><strong>Viết lại:</strong> diễn đạt lại bằng lời của mình, bổ sung ví dụ gần gũi với sinh viên.</li>
+              </ol>
+              <p class="note-box">Trong quá trình thực hiện bài này, em có sử dụng ChatGPT để hỗ trợ gợi ý dàn ý, ví dụ và cách diễn đạt ban đầu. Nội dung cuối cùng đã được em kiểm tra, chỉnh sửa và chịu trách nhiệm trước khi nộp.</p>
+            </section>
+          </section>
+
+          <section class="content-section" id="dao-duc">
+            <h2>4. Phân tích vấn đề đạo đức khi dùng AI trong học thuật</h2>
+
+            <section>
+              <h3>4.1. Ranh giới giữa hỗ trợ hợp lý và gian lận</h3>
+              <p>AI được xem là hỗ trợ hợp lý khi sinh viên dùng để tìm ý tưởng, giải thích khái niệm, gợi ý cấu trúc hoặc kiểm tra lỗi diễn đạt. Ngược lại, nếu dùng AI để viết toàn bộ bài, làm hộ bài tập hoặc nộp nguyên văn đầu ra của AI thì đó là hành vi không trung thực.</p>
+              <p>Theo em, câu hỏi quan trọng nhất là: AI đang giúp mình học tốt hơn hay đang học thay mình?</p>
+            </section>
+
+            <section>
+              <h3>4.2. Quyền sở hữu trí tuệ và trích dẫn</h3>
+              <p>AI có thể tạo văn bản, hình ảnh hoặc ý tưởng, nhưng người học vẫn cần trích dẫn nguồn tài liệu gốc nếu sử dụng thông tin từ sách, bài báo hoặc website. Ngoài ra, nếu AI có tham gia vào quá trình tạo sản phẩm, nên ghi chú rõ công cụ đã dùng. Việc này giúp bài làm minh bạch và tránh nhầm lẫn giữa đóng góp cá nhân với phần AI hỗ trợ.</p>
+            </section>
+
+            <section>
+              <h3>4.3. Tác động đến quá trình học tập</h3>
+              <p>AI giúp tiết kiệm thời gian và hỗ trợ học nhanh hơn, đặc biệt khi cần tóm tắt, giải thích hoặc gợi ý. Tuy nhiên, nếu lạm dụng, sinh viên có thể giảm khả năng tự đọc, tự viết và tự phân tích. Vì vậy, AI nên được dùng để tăng chất lượng học tập, không phải để học ít đi.</p>
+            </section>
+
+            <figure class="evidence-wide">
+              <img src="../assets/bai-6/Ảnh 5 Sơ đồ 3 vấn đề đạo đức khi dùng AI.png" alt="Sơ đồ ba vấn đề đạo đức khi dùng AI">
+              <figcaption>Hình 5: Sơ đồ 3 vấn đề đạo đức: hỗ trợ/gian lận - trích dẫn - kỹ năng học tập.</figcaption>
+            </figure>
+          </section>
+
+          <section class="content-section" id="nguyen-tac">
+            <h2>5. Bộ nguyên tắc cá nhân khi sử dụng AI</h2>
+            <p>Em xây dựng 6 nguyên tắc cá nhân:</p>
+            <ol>
+              <li>Không dùng AI để làm thay toàn bộ bài tập.</li>
+              <li>Luôn kiểm tra lại thông tin do AI tạo ra.</li>
+              <li>Không sao chép nguyên văn đầu ra của AI để nộp bài.</li>
+              <li>Ghi chú minh bạch khi AI có tham gia vào sản phẩm.</li>
+              <li>Tôn trọng bản quyền, nguồn tham khảo và quy tắc trích dẫn.</li>
+              <li>Dùng AI để học sâu hơn, không để phụ thuộc hơn.</li>
+            </ol>
+            <p>Các nguyên tắc này giúp em sử dụng AI đúng mục đích, vừa tận dụng được công nghệ, vừa giữ được trung thực học thuật.</p>
+          </section>
+
+          <section class="content-section" id="infographic">
+            <h2>6. Infographic: Sử dụng AI có trách nhiệm trong học thuật</h2>
+            <h3>Nội dung chính của infographic</h3>
+            <div class="mini-grid">
+              <div class="mini-card">
+                <strong>Tiêu đề</strong>
+                SỬ DỤNG AI CÓ TRÁCH NHIỆM TRONG HỌC THUẬT
+              </div>
+              <div class="mini-card">
+                <strong>Thông điệp trung tâm</strong>
+                AI là trợ lý học tập, không phải người học thay bạn.
+              </div>
+            </div>
+
+            <h3>5 nguyên tắc đưa vào infographic</h3>
+            <ul>
+              <li>Dùng AI để hỗ trợ, không làm thay.</li>
+              <li>Kiểm chứng thông tin trước khi sử dụng.</li>
+              <li>Không sao chép nguyên văn đầu ra của AI.</li>
+              <li>Trích dẫn và ghi chú minh bạch.</li>
+              <li>Giữ tư duy độc lập của người học.</li>
+            </ul>
+            <p><strong>Từ khóa cuối infographic:</strong> Trung thực - Kiểm chứng - Trách nhiệm.</p>
+
+            <figure class="evidence-wide">
+              <img src="../assets/bai-6/Ảnh 6 Infographic hoàn chỉnh.png" alt="Infographic hoàn chỉnh Sử dụng AI có trách nhiệm trong học thuật">
+              <figcaption>Hình 6: Infographic hoàn chỉnh “Sử dụng AI có trách nhiệm trong học thuật”.</figcaption>
+            </figure>
+          </section>
+
+          <section class="content-section" id="ket-luan">
+            <h2>7. Kết luận</h2>
+            <p>Qua bài thực hành, em hiểu rằng AI là công cụ rất hữu ích trong học tập nếu được sử dụng đúng cách. AI có thể hỗ trợ tìm ý tưởng, giải thích nội dung khó và cải thiện cách trình bày. Tuy nhiên, AI cũng có thể gây ra rủi ro nếu sinh viên phụ thuộc quá mức hoặc sử dụng để gian lận học thuật.</p>
+            <p>Với em, sử dụng AI có trách nhiệm nghĩa là: dùng AI để hỗ trợ quá trình học, kiểm chứng thông tin, chỉnh sửa bằng tư duy cá nhân và minh bạch về việc sử dụng AI. Đây là kỹ năng quan trọng trong môi trường học tập hiện đại.</p>
+          </section>
+
+          <nav class="pager" aria-label="Điều hướng bài học">
+            <a href="bai-5.html">← Bài 5</a>
+            <a href="../index.html">Trang chủ →</a>
+          </nav>
+        </article>
+
+        <aside class="side-nav">
+          <h2>Trong trang này</h2>
+          <a href="#muc-tieu">Mục tiêu</a>
+          <a href="#chinh-sach">Chính sách</a>
+          <a href="#nhiem-vu">Nhiệm vụ</a>
+          <a href="#dao-duc">Đạo đức</a>
+          <a href="#nguyen-tac">Nguyên tắc</a>
+          <a href="#infographic">Infographic</a>
+          <a href="#ket-luan">Kết luận</a>
+          <a href="../index.html">Trang chủ</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>Bài 6 - Digital Portfolio</p></div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

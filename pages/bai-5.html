@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 5 | Sử dụng AI tạo sinh</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .article-layout > .content-card {
+      min-width: 0;
+    }
+
+    .project-summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .project-summary li,
+    .note-box,
+    .prompt-box,
+    .mini-card {
+      padding: 16px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .project-summary strong,
+    .mini-card strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .note-box {
+      border-left: 4px solid var(--primary);
+    }
+
+    .prompt-box {
+      margin: 14px 0;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .evidence-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .evidence-wide {
+      margin: 16px 0;
+      overflow: hidden;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .evidence-wide img {
+      width: 100%;
+      height: auto;
+      background: #e2e8f0;
+    }
+
+    .evidence-wide figcaption {
+      padding: 12px 14px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .tools-table,
+    .compare-table,
+    .contribution-table {
+      min-width: 760px;
+    }
+
+    @media (max-width: 760px) {
+      .project-summary,
+      .mini-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Điều hướng chính">
+      <a class="brand" href="../index.html">Digital Portfolio</a>
+      <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="main-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="main-menu">
+        <a href="../index.html">Trang chủ</a>
+        <a href="#muc-tieu">Mục tiêu</a>
+        <a href="#quy-trinh">Quy trình AI</a>
+        <a href="#minh-chung">Minh chứng</a>
+        <a href="#bai-hoc">Bài học</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html">← Quay về trang chủ</a>
+        <p class="eyebrow">Bài học 05</p>
+        <h1>Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</h1>
+        <p>Báo cáo ghi lại quá trình dùng ChatGPT, công cụ tạo ảnh AI và Canva AI để xây dựng infographic “5 cách sử dụng AI hiệu quả trong học tập”.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container article-layout">
+        <article class="content-card">
+          <section class="content-section" id="muc-tieu">
+            <h2>1. Mục tiêu &amp; Sản phẩm thực hiện</h2>
+            <p>Trong bài thực hành này, em thực hiện một sản phẩm sáng tạo nội dung số với sự hỗ trợ của các công cụ AI tạo sinh. Sản phẩm em chọn là <strong>infographic với chủ đề “5 cách sử dụng AI hiệu quả trong học tập”</strong>.</p>
+            <p>Mục tiêu của sản phẩm là giúp sinh viên năm nhất hiểu cách dùng AI như một công cụ hỗ trợ học tập, ví dụ: tóm tắt tài liệu, giải thích khái niệm khó, lập kế hoạch học tập, tạo câu hỏi ôn tập và cải thiện bài viết. Nội dung được trình bày ngắn gọn, dễ nhìn, phù hợp để đưa vào portfolio học tập cá nhân.</p>
+
+            <ul class="project-summary">
+              <li>
+                <strong>Sản phẩm</strong>
+                Infographic giáo dục về cách sử dụng AI hiệu quả trong học tập.
+              </li>
+              <li>
+                <strong>Đối tượng</strong>
+                Sinh viên năm nhất cần làm quen với AI trong quá trình học.
+              </li>
+              <li>
+                <strong>Tiêu chí</strong>
+                Nội dung ngắn gọn, trực quan, có kiểm chứng và có dấu ấn cá nhân.
+              </li>
+            </ul>
+
+            <div class="table-wrap">
+              <table class="source-table tools-table">
+                <thead>
+                  <tr>
+                    <th>Công cụ</th>
+                    <th>Vai trò</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ChatGPT</td>
+                    <td>Gợi ý nội dung, tiêu đề và bố cục infographic.</td>
+                  </tr>
+                  <tr>
+                    <td>Công cụ tạo ảnh AI</td>
+                    <td>Tạo hình minh họa chủ đề học tập với AI.</td>
+                  </tr>
+                  <tr>
+                    <td>Canva AI</td>
+                    <td>Hỗ trợ thiết kế bố cục, màu sắc và hoàn thiện infographic.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <figure class="evidence-wide">
+              <img src="../assets/bai-5/pic1-chatgpt-prompt-noi-dung.png" alt="Giao diện ChatGPT khi nhập prompt tạo nội dung infographic">
+              <figcaption>Hình 1: Ảnh giao diện ChatGPT khi nhập prompt tạo nội dung infographic.</figcaption>
+            </figure>
+          </section>
+
+          <section class="content-section" id="quy-trinh">
+            <h2>2. Quá trình sử dụng AI</h2>
+
+            <section>
+              <h3>2.1. Sử dụng ChatGPT để tạo nội dung</h3>
+              <p>Em sử dụng ChatGPT để tạo bản nháp nội dung cho infographic. Prompt đã dùng:</p>
+              <p class="prompt-box">Bạn là chuyên gia thiết kế nội dung giáo dục cho sinh viên năm nhất. Hãy giúp tôi xây dựng nội dung cho một infographic chủ đề “5 cách sử dụng AI hiệu quả trong học tập”. Nội dung cần ngắn gọn, dễ hiểu, gồm tiêu đề, mô tả ngắn, 5 ý chính và phần lưu ý đạo đức khi dùng AI.</p>
+              <p>Kết quả ChatGPT đưa ra khá đầy đủ, gồm 5 cách sử dụng AI trong học tập: tóm tắt tài liệu, giải thích khái niệm, lập kế hoạch học tập, tạo câu hỏi ôn tập và cải thiện bài viết. Tuy nhiên, nội dung ban đầu còn hơi dài nên em đã tự rút gọn lại để phù hợp với dạng infographic.</p>
+
+              <h4>Nội dung sau khi chỉnh sửa</h4>
+              <ol>
+                <li><strong>Tóm tắt tài liệu:</strong> Dùng AI để rút ra ý chính từ tài liệu dài, sau đó tự kiểm tra lại với nguồn gốc.</li>
+                <li><strong>Giải thích khái niệm khó:</strong> Yêu cầu AI giải thích bằng ví dụ đơn giản, dễ hiểu.</li>
+                <li><strong>Lập kế hoạch học tập:</strong> Nhờ AI chia nhỏ nhiệm vụ và sắp xếp thời gian học.</li>
+                <li><strong>Tạo câu hỏi ôn tập:</strong> Dùng AI tạo câu hỏi trắc nghiệm, tự luận hoặc flashcard.</li>
+                <li><strong>Cải thiện bài viết:</strong> Nhờ AI góp ý diễn đạt, bố cục và lỗi trình bày.</li>
+              </ol>
+
+              <figure class="evidence-wide">
+                <img src="../assets/bai-5/pic2-chatgpt-ket-qua-noi-dung.png" alt="Kết quả ChatGPT tạo nội dung và dàn ý ban đầu">
+                <figcaption>Hình 2: Ảnh kết quả ChatGPT tạo nội dung và dàn ý ban đầu.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h3>2.2. Sử dụng AI tạo hình ảnh</h3>
+              <p>Sau khi có nội dung, em dùng công cụ tạo ảnh AI để tạo hình minh họa cho infographic. Prompt đã dùng:</p>
+              <p class="prompt-box">Create a clean modern illustration of a university student studying with a laptop, surrounded by books, notes and friendly AI assistant icons. Flat vector style, bright soft colors, suitable for an educational infographic. No text in the image.</p>
+              <p>Kết quả AI tạo ra hình ảnh sinh viên học tập cùng laptop, sách vở và các biểu tượng công nghệ. Em chọn hình có bố cục đơn giản nhất để đưa vào infographic, vì một số hình khác có quá nhiều chi tiết hoặc tạo chữ không rõ ràng.</p>
+              <p>Sau đó, em chỉnh lại kích thước hình trong Canva, đặt hình ở phần đầu infographic để tạo điểm nhấn nhưng không làm rối nội dung chính.</p>
+
+              <figure class="evidence-wide">
+                <img src="../assets/bai-5/pic3-chatgpt-tao-anh-minh-hoa.png" alt="Prompt và kết quả hình minh họa do AI tạo ra">
+                <figcaption>Hình 3: Ảnh prompt và kết quả hình minh họa do AI tạo ra.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h3>2.3. Sử dụng Canva AI để thiết kế</h3>
+              <p>Em sử dụng Canva AI để chọn mẫu infographic dọc, sau đó đưa nội dung và hình ảnh đã chuẩn bị vào thiết kế. Canva AI hỗ trợ gợi ý bố cục, màu sắc và vị trí các khối nội dung.</p>
+              <p>Tuy nhiên, em không dùng nguyên mẫu có sẵn mà chỉnh sửa lại:</p>
+              <ul>
+                <li>Đổi màu chủ đạo sang xanh dương và trắng để phù hợp với chủ đề công nghệ.</li>
+                <li>Chia nội dung thành 5 khối rõ ràng.</li>
+                <li>Thêm biểu tượng nhỏ cho từng ý.</li>
+                <li>Rút ngắn câu chữ để dễ đọc hơn.</li>
+                <li>Thêm phần lưu ý đạo đức ở cuối infographic.</li>
+                <li>Kiểm tra lại chính tả, căn lề và độ tương phản.</li>
+              </ul>
+
+              <figure class="evidence-wide">
+                <img src="../assets/bai-5/pic4-canva-thiet-ke-infographic.png" alt="Quá trình chỉnh sửa bố cục, màu sắc và nội dung trong Canva">
+                <figcaption>Hình 4: Ảnh quá trình chỉnh sửa bố cục, màu sắc và nội dung trong Canva.</figcaption>
+              </figure>
+            </section>
+          </section>
+
+          <section class="content-section" id="so-sanh">
+            <h2>3. So sánh các công cụ AI đã sử dụng</h2>
+            <div class="table-wrap">
+              <table class="source-table compare-table">
+                <thead>
+                  <tr>
+                    <th>Tiêu chí</th>
+                    <th>ChatGPT</th>
+                    <th>AI tạo hình ảnh</th>
+                    <th>Canva AI</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Điểm mạnh</td>
+                    <td>Tạo ý tưởng nhanh, nội dung rõ.</td>
+                    <td>Tạo hình minh họa đẹp, trực quan.</td>
+                    <td>Dễ thiết kế, có nhiều mẫu sẵn.</td>
+                  </tr>
+                  <tr>
+                    <td>Hạn chế</td>
+                    <td>Nội dung đôi lúc dài, chung chung.</td>
+                    <td>Có thể tạo chi tiết thừa hoặc lỗi chữ.</td>
+                    <td>Mẫu dễ bị rập khuôn nếu không chỉnh.</td>
+                  </tr>
+                  <tr>
+                    <td>Cách em xử lý</td>
+                    <td>Rút gọn, viết lại theo ý mình.</td>
+                    <td>Chọn ảnh đơn giản, bỏ ảnh lỗi.</td>
+                    <td>Tự chỉnh màu, bố cục, font chữ.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Qua so sánh, em thấy mỗi công cụ phù hợp với một giai đoạn khác nhau. ChatGPT hiệu quả nhất ở bước tạo ý tưởng và nội dung. Công cụ tạo ảnh AI giúp tiết kiệm thời gian tìm hoặc tự vẽ hình minh họa. Canva AI phù hợp ở bước hoàn thiện sản phẩm vì dễ chỉnh sửa và trình bày trực quan.</p>
+            <p>Tuy vậy, cả ba công cụ đều cần sự kiểm soát của người dùng. Nếu dùng nguyên kết quả AI, sản phẩm có thể thiếu dấu ấn cá nhân. Vì vậy, em chỉ sử dụng AI để hỗ trợ, còn bản cuối cùng được chỉnh sửa theo mục tiêu và thẩm mỹ cá nhân.</p>
+          </section>
+
+          <section class="content-section" id="vai-tro">
+            <h2>4. Vai trò của AI và đóng góp cá nhân</h2>
+            <p>AI giúp quá trình sáng tạo nhanh hơn, đặc biệt ở bước lên ý tưởng, viết bản nháp và tạo hình minh họa. Thay vì bắt đầu từ trang trắng, em có thể dựa vào gợi ý của AI để chọn lọc và phát triển sản phẩm.</p>
+            <p>Tuy nhiên, AI không thay thế hoàn toàn vai trò của người học. Em vẫn phải tự quyết định chủ đề, chọn nội dung phù hợp, chỉnh sửa câu chữ, kiểm tra tính chính xác, chọn hình ảnh và hoàn thiện bố cục. Sản phẩm cuối cùng có sự hỗ trợ của AI nhưng phần chỉnh sửa, lựa chọn và hoàn thiện chủ yếu do cá nhân thực hiện.</p>
+
+            <div class="table-wrap">
+              <table class="source-table contribution-table">
+                <thead>
+                  <tr>
+                    <th>Thành phần</th>
+                    <th>AI hỗ trợ</th>
+                    <th>Cá nhân chỉnh sửa</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Ý tưởng nội dung</td>
+                    <td>40%</td>
+                    <td>60%</td>
+                  </tr>
+                  <tr>
+                    <td>Hình minh họa</td>
+                    <td>60%</td>
+                    <td>40%</td>
+                  </tr>
+                  <tr>
+                    <td>Bố cục thiết kế</td>
+                    <td>40%</td>
+                    <td>60%</td>
+                  </tr>
+                  <tr>
+                    <td>Hoàn thiện sản phẩm</td>
+                    <td>30%</td>
+                    <td>70%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Nhìn chung, đóng góp cá nhân chiếm trên 50% vì em không sao chép nguyên văn đầu ra của AI mà có chỉnh sửa, chọn lọc và tổ chức lại thành sản phẩm hoàn chỉnh.</p>
+          </section>
+
+          <section class="content-section" id="dao-duc">
+            <h2>5. Vấn đề đạo đức khi sử dụng AI</h2>
+            <p>Khi sử dụng AI trong học tập và sáng tạo nội dung, cần chú ý đến tính minh bạch, độ chính xác và trách nhiệm cá nhân. Người học không nên sao chép nguyên văn kết quả AI rồi xem đó là sản phẩm hoàn toàn của mình. AI có thể hỗ trợ tạo ý tưởng, nhưng người dùng vẫn phải hiểu, kiểm tra và chỉnh sửa nội dung.</p>
+            <p>Một vấn đề khác là thông tin AI đưa ra chưa chắc luôn đúng. Vì vậy, với những nội dung quan trọng, cần đối chiếu lại với tài liệu gốc hoặc nguồn đáng tin cậy. Ngoài ra, hình ảnh AI tạo ra cũng cần được xem xét kỹ để tránh lỗi chi tiết, lỗi chữ hoặc nội dung không phù hợp.</p>
+            <p>Trong bài này, em sử dụng AI như công cụ hỗ trợ sáng tạo, không dùng AI để làm thay toàn bộ. Em có ghi lại prompt, kết quả, quá trình chỉnh sửa và thể hiện rõ phần đóng góp cá nhân trong sản phẩm cuối cùng.</p>
+          </section>
+
+          <section class="content-section" id="minh-chung">
+            <h2>6. Sản phẩm cuối cùng và tự đánh giá</h2>
+            <p>Sản phẩm cuối cùng là infographic <strong>“5 cách sử dụng AI hiệu quả trong học tập”</strong>. Infographic có bố cục dọc, màu sắc thống nhất, gồm phần tiêu đề, hình minh họa, 5 nội dung chính và lưu ý đạo đức khi sử dụng AI.</p>
+
+            <figure class="evidence-wide">
+              <img src="../assets/bai-5/pic5-san-pham-cuoi-infographic.png" alt="Sản phẩm infographic hoàn chỉnh">
+              <figcaption>Hình 5: Ảnh sản phẩm infographic hoàn chỉnh.</figcaption>
+            </figure>
+
+            <div class="mini-grid">
+              <div class="mini-card">
+                <strong>Tự đánh giá</strong>
+                Qua bài thực hành này, em hiểu rõ hơn cách kết hợp nhiều công cụ AI trong một quy trình sáng tạo. AI giúp tiết kiệm thời gian và mở rộng ý tưởng, nhưng để có sản phẩm tốt thì người dùng vẫn cần tư duy chọn lọc, khả năng chỉnh sửa và trách nhiệm với nội dung mình tạo ra.
+              </div>
+              <div class="mini-card">
+                <strong>Cách dùng AI hiệu quả</strong>
+                Em nhận thấy cách dùng AI hiệu quả không phải là để AI làm thay, mà là dùng AI như một trợ lý: gợi ý nhanh, tạo bản nháp, hỗ trợ hình ảnh, sau đó người học tự hoàn thiện bằng hiểu biết và phong cách cá nhân.
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section" id="bai-hoc">
+            <h2>Bài học rút ra / Kỹ năng đạt được</h2>
+            <ul>
+              <li>Biết tích hợp AI vào quy trình sáng tạo nội dung số.</li>
+              <li>Hiểu giới hạn của AI và tầm quan trọng của kiểm chứng.</li>
+              <li>Cải thiện khả năng biên tập, chọn lọc và hoàn thiện sản phẩm.</li>
+            </ul>
+          </section>
+
+          <nav class="pager" aria-label="Điều hướng bài học">
+            <a href="bai-4.html">← Bài 4</a>
+            <a href="bai-6.html">Bài 6 →</a>
+          </nav>
+        </article>
+
+        <aside class="side-nav">
+          <h2>Trong trang này</h2>
+          <a href="#muc-tieu">Mục tiêu</a>
+          <a href="#quy-trinh">Quy trình AI</a>
+          <a href="#so-sanh">So sánh</a>
+          <a href="#vai-tro">Vai trò</a>
+          <a href="#dao-duc">Đạo đức</a>
+          <a href="#minh-chung">Minh chứng</a>
+          <a href="#bai-hoc">Bài học</a>
+          <a href="../index.html">Trang chủ</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>Bài 5 - Digital Portfolio</p></div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
